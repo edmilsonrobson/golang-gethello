@@ -2,7 +2,7 @@
     "family": "gethello-containers",
     "containerDefinitions": [
       {
-        "name": "gethello",
+        "name": "gethello-docker",
         "image": "golang:1.16-alpine",
         "cpu": 10,
         "memory": 300,
