@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "gethello-docker",
-        "image": "137494897579.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo",
+            "image": "137494897579.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
@@ -16,7 +16,7 @@
             "portMappings": [
                 {
                     "containerPort": 8777,
-                    "hostPort": 8777,
+                    "hostPort": 8777
                 }
             ],
             "essential": true,
@@ -141,7 +141,7 @@
                         "valueFrom": ""
                     }
                 ]
-            },
+            }
         }
     ],
     "placementConstraints": [
