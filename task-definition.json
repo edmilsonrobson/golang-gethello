@@ -3,7 +3,7 @@
     "containerDefinitions": [
       {
         "name": "gethello-docker",
-        "image": "golang:1.16-alpine",
+        "image": "137494897579.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo",
         "cpu": 10,
         "memory": 300,
         "portMappings": [
