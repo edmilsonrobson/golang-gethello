@@ -26,31 +26,6 @@
             "command": [
                 ""
             ],
-            "environment": [
-                {
-                    "name": "",
-                    "value": ""
-                }
-            ],
-            "mountPoints": [
-                {
-                    "sourceVolume": "",
-                    "containerPath": "",
-                    "readOnly": true
-                }
-            ],
-            "volumesFrom": [
-                {
-                    "sourceContainer": "",
-                    "readOnly": true
-                }
-            ],
-            "secrets": [
-                {
-                    "name": "",
-                    "valueFrom": ""
-                }
-            ],
             "startTimeout": 0,
             "stopTimeout": 0,
             "hostname": "",
