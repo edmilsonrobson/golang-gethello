@@ -1,100 +1,130 @@
 {
-    "family": "gethello-containers",
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::137494897579:role/ecsTaskExecutionRole",
     "containerDefinitions": [
-        {
-            "name": "gethello-docker",
-            "image": "137494897579.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo",
-            "repositoryCredentials": {
-                "credentialsParameter": ""
-            },
-            "cpu": 4,
-            "memory": 300,
-            "memoryReservation": 200,
-            "links": [
-                ""
-            ],
-            "portMappings": [
-                {
-                    "containerPort": 8777,
-                    "hostPort": 8777
-                }
-            ],
-            "essential": true,
-            "entryPoint": [
-                ""
-            ],
-            "command": [
-                ""
-            ],
-            "startTimeout": 0,
-            "stopTimeout": 0,
-            "hostname": "",
-            "user": "",
-            "workingDirectory": "",
-            "disableNetworking": true,
-            "privileged": true,
-            "readonlyRootFilesystem": true,
-            "dnsServers": [
-                ""
-            ],
-            "dnsSearchDomains": [
-                ""
-            ],
-            "extraHosts": [
-                {
-                    "hostname": "",
-                    "ipAddress": ""
-                }
-            ],
-            "dockerSecurityOptions": [
-                ""
-            ],
-            "interactive": true,
-            "pseudoTerminal": true,
-            "dockerLabels": {
-                "KeyName": ""
-            },
-            "ulimits": [
-                {
-                    "name": "msgqueue",
-                    "softLimit": 0,
-                    "hardLimit": 0
-                }
-            ],
-            "logConfiguration": {
-                "logDriver": "syslog",
-                "options": {
-                    "KeyName": ""
-                },
-                "secretOptions": [
-                    {
-                        "name": "",
-                        "valueFrom": ""
-                    }
-                ]
-            }
-        }
+      {
+        "dnsSearchDomains": null,
+        "environmentFiles": null,
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "secretOptions": null,
+          "options": {
+            "awslogs-group": "/ecs/fargate-task-definition",
+            "awslogs-region": "us-east-2",
+            "awslogs-stream-prefix": "ecs"
+          }
+        },
+        "entryPoint": null,
+        "portMappings": [
+          {
+            "hostPort": 8777,
+            "protocol": "tcp",
+            "containerPort": 8777
+          }
+        ],
+        "command": null,
+        "linuxParameters": null,
+        "cpu": 0,
+        "environment": [],
+        "resourceRequirements": null,
+        "ulimits": null,
+        "dnsServers": null,
+        "mountPoints": [],
+        "workingDirectory": null,
+        "secrets": null,
+        "dockerSecurityOptions": null,
+        "memory": null,
+        "memoryReservation": 256,
+        "volumesFrom": [],
+        "stopTimeout": null,
+        "image": "137494897579.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo",
+        "startTimeout": null,
+        "firelensConfiguration": null,
+        "dependsOn": null,
+        "disableNetworking": null,
+        "interactive": null,
+        "healthCheck": null,
+        "essential": true,
+        "links": null,
+        "hostname": null,
+        "extraHosts": null,
+        "pseudoTerminal": null,
+        "user": null,
+        "readonlyRootFilesystem": null,
+        "dockerLabels": null,
+        "systemControls": null,
+        "privileged": null,
+        "name": "gethello-docker"
+      }
     ],
+    "placementConstraints": [],
+    "memory": "512",
+    "taskRoleArn": null,
+    "compatibilities": [
+      "EC2",
+      "FARGATE"
+    ],
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:137494897579:task-definition/fargate-task-definition:1",
+    "family": "fargate-task-definition",
+    "requiresAttributes": [
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.execution-role-awslogs"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.ecr-auth"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.execution-role-ecr-pull"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+      },
+      {
+        "targetId": null,
+        "targetType": null,
+        "value": null,
+        "name": "ecs.capability.task-eni"
+      }
+    ],
+    "pidMode": null,
     "requiresCompatibilities": [
-        "EC2"
+      "FARGATE"
     ],
-    "cpu": "4",
-    "memory": "300",
-    "tags": [
-        {
-            "key": "",
-            "value": ""
-        }
-    ],
-    "pidMode": "task",
-    "ipcMode": "task",
-    "inferenceAccelerators": [
-        {
-            "deviceName": "",
-            "deviceType": ""
-        }
-    ],
-    "ephemeralStorage": {
-        "sizeInGiB": 0
-    }
-}
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "revision": 1,
+    "status": "ACTIVE",
+    "inferenceAccelerators": null,
+    "proxyConfiguration": null,
+    "volumes": []
+  }
