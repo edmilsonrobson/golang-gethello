@@ -9,7 +9,7 @@
             },
             "cpu": 4,
             "memory": 300,
-            "memoryReservation": 0,
+            "memoryReservation": 200,
             "links": [
                 ""
             ],
