@@ -14,7 +14,9 @@
             "awslogs-stream-prefix": "ecs"
           }
         },
-        "entryPoint": null,
+        "entryPoint": [
+            "./golang-gethello"
+        ],
         "portMappings": [
           {
             "hostPort": 8777,
