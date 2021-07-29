@@ -32,12 +32,6 @@
                     "value": ""
                 }
             ],
-            "environmentFiles": [
-                {
-                    "value": "",
-                    "type": "s3"
-                }
-            ],
             "mountPoints": [
                 {
                     "sourceVolume": "",
@@ -51,48 +45,10 @@
                     "readOnly": true
                 }
             ],
-            "linuxParameters": {
-                "capabilities": {
-                    "add": [
-                        ""
-                    ],
-                    "drop": [
-                        ""
-                    ]
-                },
-                "devices": [
-                    {
-                        "hostPath": "",
-                        "containerPath": "",
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ],
-                "initProcessEnabled": true,
-                "sharedMemorySize": 0,
-                "tmpfs": [
-                    {
-                        "containerPath": "",
-                        "size": 0,
-                        "mountOptions": [
-                            ""
-                        ]
-                    }
-                ],
-                "maxSwap": 0,
-                "swappiness": 0
-            },
             "secrets": [
                 {
                     "name": "",
                     "valueFrom": ""
-                }
-            ],
-            "dependsOn": [
-                {
-                    "containerName": "",
-                    "condition": "SUCCESS"
                 }
             ],
             "startTimeout": 0,
@@ -163,16 +119,6 @@
     ],
     "pidMode": "task",
     "ipcMode": "task",
-    "proxyConfiguration": {
-        "type": "APPMESH",
-        "containerName": "",
-        "properties": [
-            {
-                "name": "",
-                "value": ""
-            }
-        ]
-    },
     "inferenceAccelerators": [
         {
             "deviceName": "",
